@@ -4,5 +4,5 @@ from .models import Book
 # Register your models here.
 
 class BookAdmin(admin.ModelAdmin):
-    pass
+    fields = ('title', 'category', 'description', 'published_year', 'price')
 admin.site.register(Book, BookAdmin)

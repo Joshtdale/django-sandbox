@@ -6,5 +6,6 @@ urlpatterns = [
     path('books/', views.get_books),
     path('books/<int:year>', views.books_by_year),
     path('books/<str:letter>', views.books_by_title),
+    path('menuitems/', views.menu_items),
     # path('articles/<int:year>/<int:month>/<slug:slug>/', views.article_detail),
 ]

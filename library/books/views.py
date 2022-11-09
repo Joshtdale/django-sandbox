@@ -19,6 +19,10 @@ def get_books(request):
 
     # return HttpResponse('Books be workin\'')
 
+def menu_items(request):
+    menuItems = list(Book.objects.values())
+    return JsonResponse(menuItems, safe=False)
+
 def books_by_year(request, year):
     books = list(Book.objects.filter(published_year=year).values())
     print(books)
